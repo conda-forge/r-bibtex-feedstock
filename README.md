@@ -3,11 +3,11 @@ About r-bibtex
 
 Home: https://github.com/romainfrancois/bibtex
 
-Package license: GPL (>= 2)
+Package license: GPL-2
 
 Feedstock license: BSD 3-Clause
 
-Summary: Utility to parse a bibtex file. 
+Summary: Utility to parse a bibtex file.
 
 
 
@@ -176,12 +176,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
-* [@cbrueffer](https://github.com/cbrueffer/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@dbast](https://github.com/dbast/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 * [@tfenne](https://github.com/tfenne/)
 
