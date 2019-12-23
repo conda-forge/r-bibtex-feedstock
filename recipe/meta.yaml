@@ -1,4 +1,4 @@
-{% set version = '0.4.2' %}
+{% set version = '0.4.2.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,23 +7,21 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: bibtex_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/bibtex_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bibtex/bibtex_{{ version }}.tar.gz
-  sha256: 1f06ab3660c940405230ad16ff6e4ba38d4418a59cd9b16d78a4349f8b488372
+  sha256: 80ad1cf6756cfe9e3ea299db7ef6f4b021077dd5e72a247568aef24653e141cf
 
 build:
   merge_build_host: True  # [win]
-  number: 1003
-  skip: true  # [win32]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
@@ -45,18 +43,33 @@ test:
 
 about:
   home: https://github.com/romainfrancois/bibtex
-  license: GPL (>= 2)
-  summary: 'Utility to parse a bibtex file. '
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license: GPL-2
+  summary: Utility to parse a bibtex file.
+  license_family: GPL2
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
     - tfenne
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+
+# Package: bibtex
+# Version: 0.4.2.1
+# Title: Bibtex Parser
+# Authors@R: c( person("Romain", "Francois", role = c("aut", "cre"), email = "romain@r-enthusiasts.com"), person("Kurt", "Hornik", role = "ctb", email = "Kurt.Hornik@R-project.org"), person("Michael", "Koohafkan", role = "ctb", email = "michael.koohafkan@gmail.com"), person(c("Mathew", "W."), "McLean", role = "ctb", email = "mathew.w.mclean@gmail.com" ) )
+# Description: Utility to parse a bibtex file.
+# Depends: R (>= 3.0.2)
+# Imports: stringr, utils
+# Suggests: testthat
+# License: GPL (>= 2)
+# LazyLoad: yes
+# BugReports: https://github.com/romainfrancois/bibtex/issues
+# URL: https://github.com/romainfrancois/bibtex
+# RoxygenNote: 6.0.1.9000
+# NeedsCompilation: yes
+# Packaged: 2019-12-20 20:36:03 UTC; ripley
+# Author: Romain Francois [aut, cre], Kurt Hornik [ctb], Michael Koohafkan [ctb], Mathew W. McLean [ctb]
+# Maintainer: Romain Francois <romain@r-enthusiasts.com>
+# Repository: CRAN
+# Date/Publication: 2019-12-20 22:04:43 UTC
