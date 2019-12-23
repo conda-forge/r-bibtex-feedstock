@@ -1,4 +1,4 @@
-{% set version = '0.4.2' %}
+{% set version = "0.4.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bibtex_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bibtex/bibtex_{{ version }}.tar.gz
-  sha256: 1f06ab3660c940405230ad16ff6e4ba38d4418a59cd9b16d78a4349f8b488372
+  sha256: 80ad1cf6756cfe9e3ea299db7ef6f4b021077dd5e72a247568aef24653e141cf
 
 build:
   merge_build_host: True  # [win]
-  number: 1003
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
