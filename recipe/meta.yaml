@@ -43,7 +43,7 @@ test:
 
 about:
   home: https://github.com/romainfrancois/bibtex
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Utility to parse a bibtex file.
   license_family: GPL2
   license_file:
