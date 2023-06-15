@@ -1,11 +1,11 @@
-About r-bibtex
-==============
+About r-bibtex-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bibtex-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/romainfrancois/bibtex
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bibtex-feedstock/blob/main/LICENSE.txt)
 
 Summary: Utility to parse a bibtex file.
 
