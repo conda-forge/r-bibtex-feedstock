@@ -1,4 +1,4 @@
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bibtex_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bibtex/bibtex_{{ version }}.tar.gz
-  sha256: f3c1a0a4e666c4addd73ff13ce8ce073d73d10ebca36d333328ade8a0b493ed1
+  sha256: a8e309708370800109ca67e307c68206ab098b8791de0b19b91d3001eca2a91f
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
